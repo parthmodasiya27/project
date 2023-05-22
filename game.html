@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+          margin: 100px 450px;
+        } 
+        .GameX0 {
+          display: grid;
+          grid-template-columns: repeat(3, 150px);
+          grid-template-rows: repeat(3, 150px);
+        }
+        .GameX0 div {
+          padding: 10px;
+          border: 1px solid black;
+          display: grid;
+          place-items: center;
+        }
+        </style>
+    </head>
+    <body>
+       
+      <div class="GameX0" id="container">
+        <div class="box" onclick="X0(0)"></div>
+        <div class="box" onclick="X0(1)"></div>
+        <div class="box" onclick="X0(2)"></div>
+        <div class="box" onclick="X0(3)"></div>
+        <div class="box" onclick="X0(4)"></div>
+        <div class="box" onclick="X0(5)"></div>
+        <div class="box" onclick="X0(6)"></div>
+        <div class="box" onclick="X0(7)"></div>
+        <div class="box" onclick="X0(8)"></div>
+      </div>
+
+      <script>
+        var boxes = document.getElementsByClassName("box");
+        var value = true;
+
+        function X0(a){
+                if(value == true){
+                    boxes[a].innerHTML = "0";
+                    value = false;
+                    return;
+                }else{
+                    boxes[a].innerHTML = "x";
+                    value = true;
+                    return;
+                }
+            // }
+        }
+
+        // document.getElementById("click",add);
+      </script>
+</body>
+</html>
