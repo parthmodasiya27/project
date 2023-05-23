@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-contain {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            width: 0%;
+            margin: 170px 550px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .box {
+            border: 3px solid black;
+            width: 100px;
+            height: 100px;
+            place-items: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-contain">
+        <div class="box" onclick="X0(0)"></div>
+        <div class="box" onclick="X0(1)"></div>
+        <div class="box" onclick="X0(2)"></div>
+        <div class="box" onclick="X0(3)"></div>
+        <div class="box" onclick="X0(4)"></div>
+        <div class="box" onclick="X0(5)"></div>
+        <div class="box" onclick="X0(6)"></div>
+        <div class="box" onclick="X0(7)"></div>
+        <div class="box" onclick="X0(8)" id="empty"></div>
+
+
+    </div>
+    <script>
+
+        var boxes = document.getElementsByClassName("box");
+        var value = true;
+
+        function X0(a) {
+            if (value == true) {
+                boxes[a].innerHTML = "0";
+                value = false;
+                return;
+            } else {
+                boxes[a].innerHTML = "x";
+                value = true;
+                return;
+            }
+        }
+
+        function reset() {
+            window.location.reload();
+        }
+
+        document.getElementById("empty").addEventListener("dblclick", reset);
+
+
+
+    </script>
+</body>
+
+</html>
